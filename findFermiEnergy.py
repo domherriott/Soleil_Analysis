@@ -163,12 +163,12 @@ def findFermiDirac(energyLowerBound,numberOfTempSteps):
     TKelvin=540
     ys=1/(1+np.exp((xs-fermiEnergyEV)/((Boltzmann/e)*bestTemp)))
     plt.plot(xs,ys)
-    plt.ylabel("probabiliy")
-    plt.xlabel("energy")
-    plt.suptitle("fermi dirac")
+    plt.ylabel("Probabiliy")
+    plt.xlabel("Kinetic Energy /eV")
+    plt.suptitle("Fermi Dirac")
     
-    print("Best temp: "+ str(tempRange[bestTempPos]))
-    print("Best temperature range: "+str(tempRange[bestTempPos-1])+" - "+str(tempRange[bestTempPos+1])+" Kelvin")
+    print("Closest temp: "+ str(tempRange[bestTempPos]))
+    print("Uncertainty temperature range: "+str(tempRange[bestTempPos-1])+" - "+str(tempRange[bestTempPos+1])+" Kelvin")
 
     #Saves plot using the desired file save name
     #plt.savefig(figureOutputName)
